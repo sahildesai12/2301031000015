@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCapsule Login</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+        .login {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .rectangle {
+            background-color: #FAFAFA;
+            padding: 40px 80px 40px 0;
+        }
+        .div {
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 59%;
+        }
+        .rectangle-2 {
+            background-color: #1A1A1A;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            text-align: center;
+            padding: 319px 80px 319px 35px;
+        }
+        .image {
+            background-color: #D9D9D9;
+            align-self: center;
+            width: 128px;
+            height: 128px;
+        }
+        .div-2 {
+            align-self: flex-start;
+            display: flex;
+            margin-top: 32px;
+            flex-direction: column;
+        }
+        .welcome-back-to-time-capsule {
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .preserve-and-explore-historical-moments-together {
+            color: #A0A0A0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2;
+            margin-top: 16px;
+        }
+        .column-2 {
+            display: flex;
+            flex-direction: column;
+            width: 41%;
+            margin-left: 20px;
+        }
+        .div-3 {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-self: stretch;
+            margin: auto 0;
+            font-size: 16px;
+        }
+        .sign-in {
+            color: #1A1A1A;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .continue-your-historical-journey {
+            color: #4A4A4A;
+            margin-top: 8px;
+        }
+        .email-address, .password {
+            color: #1A1A1A;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            margin-top: 32px;
+        }
+        .password {
+            margin-top: 24px;
+        }
+        .rectangle-3, .rectangle-4 {
+            border-radius: 6px;
+            margin-top: 8px;
+            color: #000000;
+            padding: 13px 16px;
+            border: 1px solid #E5E5E5;
+        }
+        .div-4 {
+            display: flex;
+            margin-top: 23px;
+            width: 100%;
+            justify-content: space-between;
+            font-size: 14px;
+            line-height: 1;
+        }
+        .div-5 {
+            display: flex;
+            gap: 7px;
+            color: #4A4A4A;
+        }
+        .rectangle-5 {
+            border-radius: 2px;
+            background-color: #FFFFFF;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #666666;
+        }
+        .forgot-password {
+            color: #1A1A1A;
+        }
+        .rectangle-6 {
+            border-radius: 6px;
+            background-color: #1A1A1A;
+            margin-top: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 12px 70px;
+            border: none;
+            cursor: pointer;
+        }
+        .rectangle-7 {
+            background-color: #FAFAFA;
+            align-self: center;
+            margin-top: 48px;
+            width: 125px;
+            font-size: 14px;
+            color: #4A4A4A;
+            line-height: 1;
+            padding: 0 8px;
+            text-align: center;
+        }
+        .div-6 {
+            display: flex;
+            margin-top: 24px;
+            width: 100%;
+            gap: 16px;
+            color: #000000;
+            text-align: center;
+        }
+        .rectangle-8, .rectangle-9 {
+            border-radius: 6px;
+            padding: 13px 43px;
+            border: 1px solid #E5E5E5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        .div-7 {
+            align-self: center;
+            display: flex;
+            margin-top: 24px;
+            gap: 9px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1;
+        }
+        .dont-have-an-account {
+            color: #4A4A4A;
+        }
+        .sign-up {
+            color: #1A1A1A;
+            cursor: pointer;
+        }
+        @media (max-width: 991px) {
+            .rectangle {
+                padding-right: 20px;
+            }
+            .div {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+            .column, .column-2 {
+                width: 100%;
+                margin-left: 0;
+            }
+            .rectangle-2 {
+                margin-top: 40px;
+                padding: 100px 20px;
+            }
+            .div-3 {
+                margin-top: 40px;
+            }
+            .rectangle-3, .rectangle-4, .rectangle-6 {
+                padding-right: 20px;
+            }
+            .rectangle-7 {
+                margin-top: 40px;
+            }
+            .rectangle-8, .rectangle-9 {
+                padding: 13px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="login">
+        <div class="rectangle">
+            <div class="div">
+                <section class="column">
+                    <div class="rectangle-2">
+                        <div class="image" role="img" aria-label="TimeCapsule logo"></div>
+                        <div class="div-2">
+                            <h1 class="welcome-back-to-time-capsule">Welcome Back to TimeCapsule</h1>
+                            <p class="preserve-and-explore-historical-moments-together">Preserve and explore historical moments together</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="column-2">
+                    <div class="div-3">
+                        <h2 class="sign-in">Sign In</h2>
+                        <p class="continue-your-historical-journey">Continue your historical journey</p>
+                        <form>
+                            <label for="email" class="email-address">Email Address</label>
+                            <input type="email" id="email" class="rectangle-3" placeholder="Enter your email" required aria-required="true">
+                            <label for="password" class="password">Password</label>
+                            <input type="password" id="password" class="rectangle-4" placeholder="Enter your password" required aria-required="true">
+                            <div class="div-4">
+                                <div class="div-5">
+                                    <input type="checkbox" id="remember-me" class="rectangle-5">
+                                    <label for="remember-me">Remember me</label>
+                                </div>
+                                <a href="forgot_pasword.html" class="forgot-password">Forgot password?</a>
+                            </div>
+                            <button type="submit"  class="rectangle-6" ><a href="index.html">Sign In</a></button>
+                        </form>
+                        <div class="rectangle-7" role="separator" aria-label="Or continue with">Or continue with</div>
+                        <div class="div-6">
+                            <button class="rectangle-8">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/9390870baeb3fe045ce7f90e95500530f1216d01ae851a44511ed109fc2e4397?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="Google logo" class="img">
+                                Google
+                            </button>
+                            <button class="rectangle-9">Facebook</button>
+                        </div>
+                        <div class="div-7">
+                            <span class="dont-have-an-account">Don't have an account?</span>
+                            <a href="crate_account.html" class="sign-up">Sign up</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

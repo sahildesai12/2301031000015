@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Recovery - TimeCapsule</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            color: #1A1A1A;
+            line-height: 1.6;
+        }
+        .fg {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #FFFFFF;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #D9D9D9;
+            margin-right: 0.5rem;
+        }
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            padding: 2rem;
+        }
+        .content-wrapper {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .left-column {
+            flex: 1;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .image-placeholder {
+            width: 256px;
+            height: 256px;
+            background-color: #D9D9D9;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 1.875rem;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            color: #A0A0A0;
+            font-size: 1.125rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        label {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        input[type="email"] {
+            padding: 0.75rem 1rem;
+            border: 1px solid #E5E5E5;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover, button:focus {
+            background-color: #333333;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .divider span {
+            padding: 0 0.5rem;
+            background-color: #FAFAFA;
+            color: #4A4A4A;
+        }
+        .return-link {
+            text-align: center;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+        .return-link:hover, .return-link:focus {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #FFFFFF;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: #4A4A4A;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .footer-links a {
+            color: #4A4A4A;
+            text-decoration: none;
+        }
+        .footer-links a:hover, .footer-links a:focus {
+            text-decoration: underline;
+        }
+        @media (max-width: 991px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%;
+            }
+            footer {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fg">
+        <header>
+            <div class="logo" role="img" aria-label="TimeCapsule logo"></div>
+            <span class="brand-name">TimeCapsule</span>
+        </header>
+        <main>
+            <div class="content-wrapper">
+                <section class="left-column" aria-labelledby="recovery-title">
+                    <div class="image-placeholder" role="img" aria-label="Decorative image for password recovery"></div>
+                    <h1 id="recovery-title">Password Recovery</h1>
+                    <p class="subtitle">We'll help you get back to preserving history</p>
+                </section>
+                <section class="right-column">
+                    <h2>Forgot Password</h2>
+                    <p>Enter your email to reset your password</p>
+                    <form action="#" method="post">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+                        <button type="submit">Send Reset Link</button>
+                    </form>
+                    <div class="divider" role="separator"><span>Or</span></div>
+                    <a href="login.html" class="return-link">Return to Login</a>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div>&copy; 2024 TimeCapsule. All rights reserved.</div>
+            <nav class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Help</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCapsule About Section</title>
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            line-height: 1.5;
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+        }
+        .about {
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .rectangle {
+            background-color: #FAFAFA;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+        .rectangle-2 {
+            background-color: #FFFFFF;
+            z-index: 10;
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            white-space: nowrap;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 13px 31px;
+        }
+        .div {
+            display: flex;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .image {
+            background-color: #D9D9D9;
+            display: flex;
+            width: 40px;
+            height: 40px;
+        }
+        .time-capsule {
+            flex-basis: auto;
+            margin: auto 0;
+        }
+        .div-2 {
+            display: flex;
+            gap: 32px;
+            font-size: 16px;
+            color: #4A4A4A;
+            font-weight: 400;
+            margin: auto 0;
+        }
+        .about-2 {
+            color: #1A1A1A;
+            font-weight: 500;
+        }
+        .rectangle-3 {
+            background-color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+            padding: 1px 0 94px;
+        }
+        .rectangle-4 {
+            background-color: #E5E5E5;
+            display: flex;
+            height: 1px;
+        }
+        .div-3 {
+            display: flex;
+            width: 714px;
+            max-width: 100%;
+            flex-direction: column;
+            margin: 89px 0 0 32px;
+        }
+        .preserving-history-through-personal-stories {
+            color: #FFFFFF;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px;
+            align-self: start;
+        }
+        .time-capsule-is-dedicated-to-creating-a-living-archive-of-historical-moments-connecting-generations-through-shared-experiences-and-memories {
+            color: #A0A0A0;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            margin-top: 31px;
+        }
+        .div-4 {
+            align-self: center;
+            margin-top: 64px;
+            width: 100%;
+            max-width: 1192px;
+        }
+        .div-5 {
+            gap: 20px;
+            display: flex;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 50%;
+            margin-left: 0px;
+        }
+        .div-6 {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: start;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .our-mission {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .we-believe-that-every-personal-story-contributes-to-the-tapestry-of-human-history-our-platform-enables-individuals-to-share-and-preserve-their-historical-artifacts-photographs-and-memories-for-future-generations {
+            color: #4A4A4A;
+            line-height: 28px;
+            align-self: stretch;
+            margin-top: 27px;
+        }
+        .div-7, .div-8, .div-9 {
+            display: flex;
+            margin-top: 21px;
+            gap: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            line-height: 2;
+        }
+        .img {
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            width: 24px;
+            align-self: start;
+            margin-top: 4px;
+        }
+        .safeguarding-historical-content-through-digital-archiving,
+        .building-bridges-between-past-and-present-generations,
+        .making-history-accessible-to-everyone-everywhere {
+            color: #4A4A4A;
+            font-size: 16px;
+            margin-left: 36px;
+        }
+        .column-2 {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 50%;
+            margin-left: 20px;
+        }
+        .image-2 {
+            border-radius: 8px;
+            background-color: #D9D9D9;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: end;
+            width: 100%;
+            padding: 330px 80px 0;
+        }
+        .rectangle-5 {
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+            display: flex;
+            margin-right: -23px;
+            flex-direction: column;
+            padding: 16px 15px 0;
+        }
+        .ten-thousand {
+            color: #1A1A1A;
+            font-size: 16px;
+            font-weight: 600;
+            align-self: start;
+        }
+        .historical-moments-preserved {
+            color: #4A4A4A;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1;
+        }
+        @media (max-width: 991px) {
+            .rectangle, .rectangle-2, .rectangle-3, .rectangle-4, .div-3,
+            .preserving-history-through-personal-stories,
+            .time-capsule-is-dedicated-to-creating-a-living-archive-of-historical-moments-connecting-generations-through-shared-experiences-and-memories,
+            .div-4, .div-6,
+            .we-believe-that-every-personal-story-contributes-to-the-tapestry-of-human-history-our-platform-enables-individuals-to-share-and-preserve-their-historical-artifacts-photographs-and-memories-for-future-generations,
+            .safeguarding-historical-content-through-digital-archiving,
+            .building-bridges-between-past-and-present-generations,
+            .making-history-accessible-to-everyone-everywhere,
+            .image-2 {
+                max-width: 100%;
+            }
+            .rectangle-2 {
+                white-space: initial;
+                padding: 0 20px;
+            }
+            .div, .div-2, .div-7, .div-8, .div-9 {
+                white-space: initial;
+            }
+            .div-3 {
+                margin-top: 40px;
+            }
+            .preserving-history-through-personal-stories {
+                font-size: 40px;
+                line-height: 45px;
+            }
+            .div-4 {
+                margin-top: 40px;
+            }
+            .div-5 {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+            .column, .column-2 {
+                width: 100%;
+            }
+            .div-6 {
+                margin-top: 40px;
+            }
+            .building-bridges-between-past-and-present-generations,
+            .making-history-accessible-to-everyone-everywhere {
+                margin-left: 10px;
+            }
+            .image-2 {
+                margin-top: 40px;
+                padding-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="about">
+        <div class="rectangle">
+            <nav class="rectangle-2" aria-label="Main Navigation">
+                <div class="div">
+                    <div class="image" role="img" aria-label="TimeCapsule Logo"></div>
+                    <div class="time-capsule">TimeCapsule</div>
+                </div>
+                <div class="div-2">
+                    <a href="index.html">Home</a>
+                    <a href="timeline.html">Timeline</a>
+                    <a href="sreach.html">Explore</a>
+                    <a href="#" class="about-2" aria-current="page">About</a>
+                </div>
+            </nav>
+            <section class="rectangle-3">
+                <div class="rectangle-4" role="separator"></div>
+                <div class="div-3">
+                    <h1 class="preserving-history-through-personal-stories">
+                        Preserving History Through Personal Stories
+                    </h1>
+                    <p class="time-capsule-is-dedicated-to-creating-a-living-archive-of-historical-moments-connecting-generations-through-shared-experiences-and-memories">
+                        TimeCapsule is dedicated to creating a living archive of historical
+                        moments, connecting generations through shared experiences and
+                        memories.
+                    </p>
+                </div>
+            </section>
+            <section class="div-4">
+                <div class="div-5">
+                    <div class="column">
+                        <div class="div-6">
+                            <h2 class="our-mission">Our Mission</h2>
+                            <p class="we-believe-that-every-personal-story-contributes-to-the-tapestry-of-human-history-our-platform-enables-individuals-to-share-and-preserve-their-historical-artifacts-photographs-and-memories-for-future-generations">
+                                We believe that every personal story contributes to the tapestry
+                                of human history. Our platform enables individuals to share and
+                                preserve their historical artifacts, photographs, and memories for
+                                future generations.
+                            </p>
+                            <div class="div-7">
+                                <img
+                                    loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/dde8af684cbc345dd87b33c20e5381892507fbb9ba58836263610f6ed178cdf3?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&"
+                                    class="img"
+                                    alt="Preserve icon"
+                                />
+                                <div>Preserve</div>
+                            </div>
+                            <p class="safeguarding-historical-content-through-digital-archiving">
+                                Safeguarding historical content through digital archiving
+                            </p>
+                            <div class="div-8">
+                                <img
+                                    loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/dde8af684cbc345dd87b33c20e5381892507fbb9ba58836263610f6ed178cdf3?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&"
+                                    class="img"
+                                    alt="Connect icon"
+                                />
+                                <div>Connect</div>
+                            </div>
+                            <p class="building-bridges-between-past-and-present-generations">
+                                Building bridges between past and present generations
+                            </p>
+                            <div class="div-9">
+                                <img
+                                    loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/dde8af684cbc345dd87b33c20e5381892507fbb9ba58836263610f6ed178cdf3?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&"
+                                    class="img"
+                                    alt="Share icon"
+                                />
+                                <div>Share</div>
+                            </div>
+                            <p class="making-history-accessible-to-everyone-everywhere">
+                                Making history accessible to everyone, everywhere
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-2">
+                        <div class="image-2" role="img" aria-label="Historical image collage">
+                            <div class="rectangle-5">
+                                <div class="ten-thousand">10,000+</div>
+                                <div class="historical-moments-preserved">
+                                    Historical moments preserved
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

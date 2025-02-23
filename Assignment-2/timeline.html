@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Timeline</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline-container {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .timeline-wrapper {
+            background-color: #fafafa;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #fff;
+            z-index: 10;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo {
+            background-color: #d9d9d9;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-item {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .nav-item-active {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        .hero-section {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 3rem 2rem;
+        }
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            color: #a0a0a0;
+            font-size: 1.25rem;
+        }
+        .main-content {
+            display: flex;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        .sidebar {
+            width: 22%;
+        }
+        .sidebar-section {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .sidebar-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .sidebar-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-item {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-link {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+        .sidebar-link-active {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        .main-column {
+            width: 78%;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #e5e5e5;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .search-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-marker {
+            width: 1rem;
+            height: 1rem;
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        .timeline-card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .card-date {
+            color: #666;
+            font-size: 0.875rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        .card-category {
+            background-color: #f5f5f5;
+            color: #4a4a4a;
+            font-size: 0.875rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+        }
+        .card-image {
+            width: 100%;
+            height: 16rem;
+            background-color: #d9d9d9;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .card-description {
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-stats {
+            display: flex;
+            gap: 1rem;
+            color: #4a4a4a;
+        }
+        .card-comments {
+            display: flex;
+            align-items: center;
+        }
+        .comment-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.25rem;
+        }
+        .card-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .timeline-end {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+        .timeline-end-marker {
+            width: 1rem;
+            height: 1rem;
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .timeline-end-line {
+            width: 2px;
+            height: 1.5rem;
+            background-color: #e5e5e5;
+            margin-right: 0.5rem;
+        }
+        .timeline-end-bar {
+            width: 100%;
+            height: 1.5rem;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 991px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .sidebar, .main-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline-wrapper">
+            <header class="header">
+                <div class="logo-container">
+                    <div class="logo" role="img" aria-label="TimeCapsule logo"></div>
+                    <span class="logo-text">TimeCapsule</span>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-item">Home</a></li>
+                        <li><a href="#" class="nav-item nav-item-active">Timeline</a></li>
+                        <li><a href="sreach.html" class="nav-item">Explore</a></li>
+                        <li><a href="about.html" class="nav-item">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="hero-section">
+                <h1 class="hero-title">Historical Timeline</h1>
+                <p class="hero-subtitle">Explore history through personal stories and artifacts</p>
+            </section>
+            <main class="main-content">
+                <aside class="sidebar">
+                    <section class="sidebar-section">
+                        <h2 class="sidebar-title">Time Periods</h2>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item"><a href="#all-periods" class="sidebar-link sidebar-link-active">All Periods</a></li>
+                            <li class="sidebar-item"><a href="#1900-1949" class="sidebar-link">1900-1949</a></li>
+                            <li class="sidebar-item"><a href="#1950-1999" class="sidebar-link">1950-1999</a></li>
+                            <li class="sidebar-item"><a href="#2000-present" class="sidebar-link">2000-Present</a></li>
+                        </ul>
+                    </section>
+                    <section class="sidebar-section">
+                        <h2 class="sidebar-title">Categories</h2>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item"><a href="#all-categories" class="sidebar-link sidebar-link-active">All Categories</a></li>
+                            <li class="sidebar-item"><a href="#wars-conflicts" class="sidebar-link">Wars & Conflicts</a></li>
+                            <li class="sidebar-item"><a href="#social-movements" class="sidebar-link">Social Movements</a></li>
+                            <li class="sidebar-item"><a href="#science-technology" class="sidebar-link">Science & Technology</a></li>
+                            <li class="sidebar-item"><a href="#culture-arts" class="sidebar-link">Culture & Arts</a></li>
+                        </ul>
+                    </section>
+                </aside>
+                <div class="main-column">
+                    <form class="search-bar" role="search">
+                        <label for="search-input" class="visually-hidden">Search historical events</label>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/5e0f2492e4817bf14e291958177d352e5481bbd89b9e4d81a9da60937ebfad7d?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="search-icon" aria-hidden="true">
+                        <input type="search" id="search-input" class="search-input" placeholder="Search historical events..." aria-label="Search historical events">
+                    </form>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-card">
+                            <header class="card-header">
+                                <div>
+                                    <time datetime="1941-12-07" class="card-date">December 7, 1941</time>
+                                    <h3 class="card-title">Pearl Harbor Attack</h3>
+                                </div>
+                                <span class="card-category">Wars & Conflicts</span>
+                            </header>
+                            <div class="card-image" role="img" aria-label="Image of Pearl Harbor attack"></div>
+                            <p class="card-description">Personal accounts and photographs from the attack on Pearl Harbor that brought the United States into World War II.</p>
+                            <footer class="card-footer">
+                                <div class="card-stats">
+                                    <span>245 views</span>
+                                    <div class="card-comments">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/1efd1689a3380c250676ac2a25f8fbf1d70e530e3ebd4be01cffc890ac45de53?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="comment-icon" aria-hidden="true">
+                                        <span>18 comments</span>
+                                    </div>
+                                </div>
+                                <a href="#details" class="card-link">View Details →</a>
+                            </footer>
+                        </div>
+                    </article>
+                    <div class="timeline-end">
+                        <div class="timeline-end-marker" aria-hidden="true"></div>
+                        <div class="timeline-end-line" aria-hidden="true"></div>
+                        <div class="timeline-end-bar" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

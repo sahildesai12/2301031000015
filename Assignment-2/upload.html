@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Section</title>
+    <style>
+        .upload-page {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .rectangle {
+            background-color: #fafafa;
+            display: flex;
+            padding-bottom: 318px;
+            flex-direction: column;
+        }
+        @media (max-width: 991px) {
+            .rectangle {
+                max-width: 100%;
+                padding-bottom: 100px;
+            }
+        }
+        .rectangle-2 {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 13px 32px;
+        }
+        @media (max-width: 991px) {
+            .rectangle-2 {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+        .image {
+            background-color: #d9d9d9;
+            display: flex;
+            width: 40px;
+            height: 40px;
+        }
+        .rectangle-3 {
+            background-color: #e5e5e5;
+            display: flex;
+            height: 1px;
+        }
+        @media (max-width: 991px) {
+            .rectangle-3 {
+                max-width: 100%;
+            }
+        }
+        .img {
+            aspect-ratio: 1.8;
+            object-fit: contain;
+            object-position: center;
+            width: 832px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            align-self: center;
+            max-width: 100%;
+            margin: 30px 0 -64px;
+        }
+        @media (max-width: 991px) {
+            .img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="upload-page">
+        <section class="rectangle" aria-label="Upload Section">
+            <div class="rectangle-2" role="banner">
+                <div class="image" role="img" aria-label="Upload icon"></div>
+            </div>
+            <hr class="rectangle-3" aria-hidden="true">
+            <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/3d9b5c9dc80b3d477550eeef8f726c09f0f0bf59394d4d0502b7d1d9c36526fc?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="Uploaded content preview" class="img" loading="lazy">
+        </section>
+    </main>
+    <button><a href="profile.html">Back</a></button>
+</body>
+</html>

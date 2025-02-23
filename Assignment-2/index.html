@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeCapsule - Preserve History Through Personal Stories</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1A1A1A;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .header {
+            background-color: #FFFFFF;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 2px solid #1A1A1A;
+            border-radius: 0.4375rem;
+        }
+        .nav-list {
+            display: flex;
+            gap: 1.9375rem;
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-item a {
+            color: #4A4A4A;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .nav-item a[aria-current="page"] {
+            color: #1A1A1A;
+            font-weight: 500;
+        }
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .btn {
+            padding: 0.5rem 0.625rem;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+        }
+        .hero {
+            background-color: #D9D9D9;
+            padding: 10.5625rem 2rem;
+            color: #FFFFFF;
+        }
+        .hero-content {
+            max-width: 35.875rem;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .hero-description {
+            font-size: 1.25rem;
+            color: #A0A0A0;
+            margin-bottom: 1.875rem;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+        .footer {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            padding: 3.25rem 2rem 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 12rem;
+        }
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .footer-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-item {
+            margin-bottom: 0.5rem;
+        }
+        .footer-link {
+            color: #A0A0A0;
+            text-decoration: none;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .feedback-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.1875rem;
+            padding: 0.5rem 1rem;
+        }
+        @media (max-width: 991px) {
+            .header, .hero, .footer {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+            .hero {
+                padding-top: 6.25rem;
+                padding-bottom: 6.25rem;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon" aria-hidden="true"></div>
+            <span>TimeCapsule</span>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="timeline.html">Timeline</a></li>
+                <li class="nav-item"><a href="sreach.html">Explore</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="cta-group">
+            <a href="login.html" class="btn">Login</a>
+            <a href="upload.html" class="btn btn-primary">Upload History</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Preserve History Through Personal Stories</h1>
+                <p class="hero-description">Join our community in documenting and sharing historical moments that shaped our world</p>
+                <div class="hero-cta">
+                    <a href="login.html" class="btn btn-primary">Start Contributing</a>
+                    <a href="sreach.html" class="btn btn-secondary">Explore Timeline</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2 class="footer-title">TimeCapsule</h2>
+                <p>Preserving history, one story at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Navigation</h2>
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
+                    <li class="footer-item"><a href="timeline.html" class="footer-link">Timeline</a></li>
+                    <li class="footer-item"><a href="sreach.html" class="footer-link">Explore</a></li>
+                    <li class="footer-item"><a href="sreach.html" class="footer-link">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Resources</h2>
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="comaing_soon.html" class="footer-link">Help Center</a></li>
+                    <li class="footer-item"><a href="comaing_soon.html" class="footer-link">Guidelines</a></li>
+                    <li class="footer-item"><a href="comaing_soon.html" class="footer-link">Terms</a></li>
+                    <li class="footer-item"><a href="comaing_soon.html" class="footer-link">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2 class="footer-title">Connect</h2>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/d236c5f193f0a7810571aa1cf0ee455a61e20a79a6865005ae45f715d39d1455?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="social-icon">
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/3dd7cd3c9a2098ec5bb838ba0f9d2cfb05eec68adc499349d3228754b938a3c6?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="social-icon">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/5924a41d2f0cfe2e02de21569031ddf4c727c6c7cd4dfc8cf489c551ba96977e?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="social-icon">
+                    </a>
+                </div>
+                <a href="feedback.html" class="btn btn-primary feedback-btn">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/1b41e4439f5c4b9fa4e630e5dfa8c52a/7a710584720de04c023e0844bbbd85ffb057a7ecb7318158e8c950fb9289baed?apiKey=1b41e4439f5c4b9fa4e630e5dfa8c52a&" alt="" class="social-icon">
+                    <span>Feedback</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
